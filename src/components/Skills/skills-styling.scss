@@ -1,0 +1,101 @@
+.skills-section {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 850px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .skills-header {
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      line-height: 61px;
+      font-size: 50px;
+      color: #c14953;
+      font-style: italic;
+      margin: 0;
+      font-weight: 700;
+    }
+    .below {
+      display: flex;
+      .rect {
+        height: 15px;
+        width: 250px;
+        background-color: #c14953;
+        margin-left: 8px;
+      }
+      .box {
+        width: 15px;
+        height: 15px;
+        background-color: #c14953;
+        margin-left: 10px;
+      }
+    }
+  }
+  .skills-category {
+    display: flex;
+    padding-top: 20px;
+    width: 100%;
+    height: 260px; //Temporary Fixed height holder
+    .left-side {
+      width: 50%;
+      text-align: center;
+      .svg {
+        width: 100px;
+        height: 100px;
+      }
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        line-height: 39px;
+        color: #c14953;
+        font-weight: 700;
+        font-style: italic;
+      }
+      p {
+        line-height: 31px;
+        font-size: 22px;
+        font-family: "Hind Madurai", sans-serif;
+        color: #764248;
+      }
+    }
+    .logos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .top {
+        display: flex;
+        width: 400px;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .bottom {
+        display: flex;
+        width: 400px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 10px;
+      }
+    }
+    .right-side {
+      width: 50%;
+      text-align: center;
+      .svg {
+        width: 100px;
+        height: 100px;
+      }
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        line-height: 39px;
+        color: #c14953;
+        font-weight: 700;
+        font-style: italic;
+      }
+      p {
+        line-height: 31px;
+        font-size: 22px;
+        font-family: "Hind Madurai", sans-serif;
+        color: #764248;
+      }
+    }
+  }
+}

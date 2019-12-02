@@ -1,0 +1,17 @@
+.loader {
+  position: absolute;
+  height: 400vh;
+  width: 100%;
+  background-color: #eae2b7;
+  display: flex;
+  justify-content: center;
+  padding-top: 20rem;
+  animation-delay: 3.5s !important;
+}
+.d-none{
+  display: none;
+}
+
+.delay-2s{
+  animation-delay: 1.2s !important;
+}
