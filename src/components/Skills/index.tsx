@@ -6,6 +6,7 @@ import { ReactComponent as ReduxSVG } from "../../assets/frontend/redux-original
 import { ReactComponent as TypeScriptSVG } from "../../assets/frontend/typescript-original.svg";
 
 import { ReactComponent as ExpressSVG } from "../../assets/backend/express-original.svg";
+import { ReactComponent as FirebaseSVG } from "../../assets/backend/firebase.svg";
 import { ReactComponent as GraphQLSVG } from "../../assets/backend/graphql-icon.svg";
 import { ReactComponent as MongoDBSVG } from "../../assets/backend/mongodb-original-wordmark.svg";
 import { ReactComponent as MYSQLSVG } from "../../assets/backend/mysql-original.svg";
@@ -47,14 +48,9 @@ const Skills = React.forwardRef((props: any, ref: any) => {
             My main Front-End Tech-stack for projects primarily consists of
             technologies based around Javascript, more specifically the
             Javascript Framework, <b>ReactJS</b>. Alongside ReactJS, I
-            frequently use
-            <b>Typescript</b> for features such as Static Typing and for more
-            Object-Oriented Code. However, I am also familiar with
-            <b>Laravel</b> and <b>Python</b> programming as well.
-            {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
-            id eius facere. Architecto, laboriosam? Soluta debitis mollitia illo
-            nostrum minima. Eligendi fuga modi, facilis possimus delectus quam
-            vero maiores. */}
+            frequently use <b>Typescript</b> for features such as Static Typing
+            and for more Object-Oriented Code. However, I am also familiar with
+            <b> Laravel</b> and <b>Python</b> programming as well.
           </p>
         </div>
       </div>
@@ -62,10 +58,12 @@ const Skills = React.forwardRef((props: any, ref: any) => {
         <div className="left-side">
           <h3>Back-End Development</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
-            id eius facere. Architecto, laboriosam? Soluta debitis mollitia illo
-            nostrum minima. Eligendi fuga modi, facilis possimus delectus quam
-            vero maiores.
+            Similarily to the Front-End, My main server-side framework of choice
+            is <b>Express</b>. I am comfortable with creating REST APIs as well
+            as using <b>GraphQL</b> for requests. As for the database, I am
+            familiar with both relational and non-relational databases such as{" "}
+            <b>MongoDB</b> and <b>MySQL</b>. I have also used cloud-systems such
+            as <b>Firebase</b> and <b>Amazon AWS</b> as well.
           </p>
         </div>
         <div className="right-side logos">
@@ -77,6 +75,7 @@ const Skills = React.forwardRef((props: any, ref: any) => {
           <div>
             <MongoDBSVG className="svg" />
             <MYSQLSVG className="svg" />
+            <FirebaseSVG className="svg" />
           </div>
         </div>
       </div>
@@ -95,10 +94,11 @@ const Skills = React.forwardRef((props: any, ref: any) => {
         <div className="right-side">
           <h3>Designing & Layout</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
-            id eius facere. Architecto, laboriosam? Soluta debitis mollitia illo
-            nostrum minima. Eligendi fuga modi, facilis possimus delectus quam
-            vero maiores.
+            I primarily focus on building the layout with Adobe XD before coding
+            anything as it allows for further consideration of the User's
+            experience. Alongside this, I use <b>Photoshop</b> and{" "}
+            <b>Illustrator</b> to make SVGs and animations. My go-to for Website
+            styling is usually <b>SASS</b>
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 .loader {
   position: absolute;
-  height: 400vh;
+  height: 300vh;
   width: 100%;
   background-color: #eae2b7;
   display: flex;
@@ -8,10 +8,10 @@
   padding-top: 20rem;
   animation-delay: 3.5s !important;
 }
-.d-none{
+.d-none {
   display: none;
 }
 
-.delay-2s{
+.delay-2s {
   animation-delay: 1.2s !important;
 }

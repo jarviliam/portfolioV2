@@ -1,5 +1,5 @@
 import React from "react";
-import {ReactComponent as GitHubSVG} from '../../assets/github-original.svg'
+import { ReactComponent as GitHubSVG } from "../../assets/github-original.svg";
 import "./nav-style.scss";
 
 type Props = {
@@ -23,22 +23,28 @@ const Navigation: React.SFC<Props> = props => {
           className="nav-content-container"
           onClick={() => props.handleClick(1)}
         >
-          <h3>About</h3>
+          <h3>Skills</h3>
         </div>
         <div
           className="nav-content-container"
           onClick={() => props.handleClick(2)}
         >
-          <h3>Skills</h3>
+          <h3>Work</h3>
         </div>
         <div
           className="nav-content-container"
           onClick={() => props.handleClick(3)}
         >
-          <h3>Work</h3>
+          <h3>Contact</h3>
         </div>
         <div className="github-container">
-          <a href="https://github.com/jarviliam" rel="noopener noreferrer" target="_blank"><GitHubSVG width="40px" /></a>
+          <a
+            href="https://github.com/jarviliam"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <GitHubSVG width="40px" />
+          </a>
         </div>
       </div>
     </div>

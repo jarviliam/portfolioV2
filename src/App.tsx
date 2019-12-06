@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Loader from "./components/Loader";
@@ -37,8 +36,7 @@ class App extends Component<{}, {}> {
         <Hero ref={(ref: any) => this.setRef(ref)} />
         <Skills ref={(ref: any) => this.setRef(ref)} />
         <Works ref={(ref: any) => this.setRef(ref)} />
-        {/* <Contact /> */}
-        <Footer />
+        <Footer ref={(ref: any) => this.setRef(ref)} />
       </div>
     );
   }
