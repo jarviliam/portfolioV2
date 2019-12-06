@@ -24,19 +24,23 @@ class Project {
   public highlights: any[];
   public frontend: any[];
   public backend: any[];
+  public url: string;
 
   constructor(
     title: string,
     description: string,
-    highlights: any[],
-    frontend: any[],
-    backend: any[]
+    highlights: string[],
+    frontend: string[],
+    backend: string[],
+    // tslint:disable-next-line: trailing-comma
+    url: string
   ) {
     this.title = title;
     this.description = description;
     this.highlights = highlights;
     this.frontend = frontend;
     this.backend = backend;
+    this.url = url;
   }
   public renderFrontEnd() {
     return this.frontend.map((item, index) => {
@@ -62,7 +66,8 @@ export const Portfolio = new Project(
   portfolioDesc,
   [IllustratorSVG, ReactSVG, SassSVG],
   [JavaScriptSVG, HTMLSVG, AdobeXD, IllustratorSVG],
-  []
+  [],
+  "https://github.com/jarviliam/portfolioV2"
 );
 
 const spinThisDesc =
@@ -72,7 +77,8 @@ export const SpinThis = new Project(
   spinThisDesc,
   [ReactSVG, ExpressSVG, MongoDB],
   [HTMLSVG, ReactSVG, ReduxSVG, SassSVG],
-  [ExpressSVG, MongoDB]
+  [ExpressSVG, MongoDB],
+  "https://github.com/jarviliam/record-store"
 );
 
 const movieBuffdesc =
@@ -82,7 +88,8 @@ export const MovieBuff = new Project(
   movieBuffdesc,
   [ReactSVG, ReduxSVG, SassSVG],
   [HTMLSVG, ReactSVG, ReduxSVG, SassSVG],
-  []
+  [],
+  "https://github.com/jarviliam/movie-buff"
 );
 
 const meigenNowDesc =
@@ -92,7 +99,8 @@ export const MeigenNow = new Project(
   meigenNowDesc,
   [TypeScriptSVG, ReactSVG, GraphQL],
   [HTMLSVG, ReactSVG, ReduxSVG, SassSVG, TypeScriptSVG],
-  [NodeSVG, ExpressSVG, GraphQL, Firebase, Apollo, Redis]
+  [NodeSVG, ExpressSVG, GraphQL, Firebase, Apollo, Redis],
+  "https://github.com/jarviliam/meigen-now"
 );
 const weatherAppDesc =
   "A simple front-end weather forecast application that retrieves the weather based on location and stores it in Redux.";
@@ -101,7 +109,8 @@ export const WeatherApp = new Project(
   weatherAppDesc,
   [ReduxSVG, ReactSVG, SassSVG],
   [ReduxSVG, ReactSVG, SassSVG, HTMLSVG, JavaScriptSVG],
-  []
+  [],
+  "https://github.com/jarviliam/Weather-Application"
 );
 const portfolioV1Desc =
   "Old portfolio to showcase applications. Redux and React hooks were used to allow for both English and Japanese localization of the website.";
@@ -110,7 +119,15 @@ export const PortfolioV1 = new Project(
   portfolioV1Desc,
   [SassSVG, ReactSVG, ReduxSVG],
   [HTMLSVG, ReactSVG, SassSVG, ReduxSVG],
-  []
+  [],
+  "https://github.com/jarviliam/portfolio"
 );
 
-export const ProjectArray = [Portfolio,SpinThis,MeigenNow,MovieBuff,WeatherApp,PortfolioV1]
+export const ProjectArray = [
+  Portfolio,
+  SpinThis,
+  MeigenNow,
+  MovieBuff,
+  WeatherApp,
+  PortfolioV1
+];

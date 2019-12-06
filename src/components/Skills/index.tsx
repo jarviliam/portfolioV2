@@ -44,10 +44,17 @@ const Skills = React.forwardRef((props: any, ref: any) => {
         <div className="right-side">
           <h3>Front-End Development</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
+            My main Front-End Tech-stack for projects primarily consists of
+            technologies based around Javascript, more specifically the
+            Javascript Framework, <b>ReactJS</b>. Alongside ReactJS, I
+            frequently use
+            <b>Typescript</b> for features such as Static Typing and for more
+            Object-Oriented Code. However, I am also familiar with
+            <b>Laravel</b> and <b>Python</b> programming as well.
+            {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut
             id eius facere. Architecto, laboriosam? Soluta debitis mollitia illo
             nostrum minima. Eligendi fuga modi, facilis possimus delectus quam
-            vero maiores.
+            vero maiores. */}
           </p>
         </div>
       </div>

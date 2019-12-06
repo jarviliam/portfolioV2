@@ -27,7 +27,9 @@ const Works = React.forwardRef((props: any, ref: any) => {
                 <span>Read More</span>
               </div>
               <div className="code-button">
-                <DocumentSVG className="document" />
+                <a href={project.url}>
+                  <DocumentSVG className="document" />
+                </a>
               </div>
             </div>
           </div>
