@@ -1,6 +1,5 @@
 import React from "react";
 import { ReactComponent as ComputerSVG } from "../../assets/Computer.svg";
-import "./hero-styling.scss";
 
 const Hero = React.forwardRef((props: any, ref: any) => {
   return (

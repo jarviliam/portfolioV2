@@ -1,6 +1,5 @@
 import React from "react";
 import { ReactComponent as GitHubSVG } from "../../assets/github-original.svg";
-import "./nav-style.scss";
 
 type Props = {
   handleClick: (number: number) => void;

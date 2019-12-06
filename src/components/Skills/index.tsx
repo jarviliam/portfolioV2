@@ -18,8 +18,6 @@ import { ReactComponent as PhotoshopSVG } from "../../assets/design/photoshop-li
 import { ReactComponent as SASSSVG } from "../../assets/design/sass-original.svg";
 import { ReactComponent as XDSVG } from "../../assets/design/xd.svg";
 
-import "./skills-styling.scss";
-
 const Skills = React.forwardRef((props: any, ref: any) => {
   return (
     <section ref={ref} className="skills-section">

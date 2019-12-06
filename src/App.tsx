@@ -6,6 +6,8 @@ import Navigation from "./components/Navigation";
 import Skills from "./components/Skills";
 import Works from "./components/Works";
 
+import "./sass/main.scss";
+
 class App extends Component<{}, {}> {
   public refArray: HTMLDivElement[];
   private setRef: (ref: any) => void;

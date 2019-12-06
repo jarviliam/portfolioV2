@@ -1,13 +1,13 @@
 footer {
   height: 93px;
-  background-color: #764248;
+  background-color: $secondary-color;
   display: flex;
   align-items: center;
   justify-content: center;
 
   h3 {
     color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 30px;
+    font-family: $primary-font;
+    font-size: $small + 10px;
   }
 }

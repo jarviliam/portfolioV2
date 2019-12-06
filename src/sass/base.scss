@@ -1,0 +1,50 @@
+$global-padding: 25px;
+
+$tech-svg-size: 100px;
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin focusGrow() {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    @content;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+@mixin hocus() {
+  background-image: linear-gradient($secondary-color, $secondary-color);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+  &:hover,
+  &:focus {
+    @content;
+  }
+}

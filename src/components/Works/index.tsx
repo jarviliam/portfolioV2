@@ -3,7 +3,6 @@ import React from "react";
 import { ReactComponent as DocumentSVG } from "../../assets/document.svg";
 import { ProjectArray } from "../../utilities/projectlist";
 
-import "./works-style.scss";
 const Works = React.forwardRef((props: any, ref: any) => {
   return (
     <section ref={ref} className="works-section">
@@ -27,7 +26,7 @@ const Works = React.forwardRef((props: any, ref: any) => {
                 <span>Read More</span>
               </div>
               <div className="code-button">
-                <a href={project.url}>
+                <a rel="noopener noreferrer" target="_blank" href={project.url}>
                   <DocumentSVG className="document" />
                 </a>
               </div>

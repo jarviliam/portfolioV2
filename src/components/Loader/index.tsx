@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../../../node_modules/animate.css/animate.css";
 import { ReactComponent as LiamSVG } from "../../assets/LiamJarvis.svg";
-import "./animations.scss";
+
 const Loader = () => {
   useEffect(() => {
     console.log("use");
