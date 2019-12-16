@@ -17,6 +17,12 @@
         background-size: 100% 2px;
         cursor: pointer;
       }
+      @include mini {
+        // font-size: 20px;
+        line-height: 30px;
+      }
+      @include md {
+      }
     }
   }
   .navigation-contents {
@@ -35,13 +41,95 @@
           cursor: pointer;
         }
       }
+      @include mini {
+        display: none;
+      }
+      @include md {
+        display: block;
+      }
     }
     .github-container {
       width: 120px;
+      @include mini {
+        display: none;
+      }
+      @include md {
+        display: block;
+      }
+    }
+  }
+  .tab-button {
+    display: block;
+    @include md {
+      display: none;
+    }
+  }
+  .slider {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .slider-menu {
+      width: 100%;
+      background-color: $secondary-color;
+      .slider-head {
+        padding: 20px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+          color: white;
+          // font-size: $large;
+        }
+      }
+      ul {
+        margin: 0;
+        list-style: none;
+
+        li {
+          color: white;
+          font-family: $primary-font;
+          font-size: $medium;
+          transition: right 0.4s ease-in-out;
+
+          // &:hover {
+          //   cursor: pointer;
+          //   animation-name: slideRight;
+          //   animation-duration: 1s;
+          // }
+        }
+      }
     }
   }
 }
 
 .set {
   transform: translateY(0);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(20%);
+  }
 }

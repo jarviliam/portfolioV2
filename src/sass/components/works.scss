@@ -1,10 +1,25 @@
 .works-section {
   padding-left: $global-padding;
   padding-right: $global-padding;
+  @include md {
+    $global-padding: 10px;
+    padding-left: $global-padding;
+    padding-right: $global-padding;
+  }
+  @include lg {
+    $global-padding: 20px;
+    padding-left: $global-padding;
+    padding-right: $global-padding;
+  }
+  @include xl {
+    $global-padding: 25px;
+    padding-left: $global-padding;
+    padding-right: $global-padding;
+  }
   .works-header {
     h2 {
       font-family: $primary-font;
-      line-height: 61px;
+      line-height: 60px;
       font-size: $large;
       color: $primary-color;
       font-style: italic;
@@ -112,9 +127,6 @@
           }
           &:hover {
             cursor: pointer;
-            // width: 155px;
-            // -webkit-transition: width 1s;
-            // transition: width 1s;
           }
         }
       }

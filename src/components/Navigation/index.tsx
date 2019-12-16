@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ReactComponent as GitHubSVG } from "../../assets/github-original.svg";
+import { ReactComponent as WaveSVG } from "../../assets/waves.svg";
 
 type Props = {
   handleClick: (number: number) => void;
 };
 
 const Navigation: React.SFC<Props> = props => {
+  const [open, setOpen] = useState(false);
+  const openTab = () => {
+    setOpen(!open);
+  };
+  const style = {
+    transform: open ? "translateY(0)" : "translateY(-100%)",
+    animationName: open ? "slideDown" : "slideUp",
+    animationDuration: "0.5s"
+  };
   return (
     <div id="nav" className="navigation">
       <div className="logo-name">
@@ -45,6 +55,29 @@ const Navigation: React.SFC<Props> = props => {
             <GitHubSVG width="40px" />
           </a>
         </div>
+        <div className="tab-button" onClick={openTab}>
+          <span>click</span>
+        </div>
+      </div>
+      <div className="slider" style={style}>
+        <div className="slider-menu">
+          <div className="slider-head">
+            <h2>Liam Jarvis</h2>
+            <span onClick={() => setOpen(false)}>Close</span>
+          </div>
+          <ul>
+            <li>
+              <span>Skills</span>
+            </li>
+            <li>
+              <span>Work</span>
+            </li>
+            <li>
+              <span>GitHub</span>
+            </li>
+          </ul>
+        </div>
+        <WaveSVG />
       </div>
     </div>
   );

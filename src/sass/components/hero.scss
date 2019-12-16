@@ -20,11 +20,21 @@ body {
       display: flex;
       flex-direction: column;
       width: 50%;
-
+      @include mini {
+        width: 100%;
+      }
+      @include md {
+        width: 50%;
+      }
       .hero-action {
         height: 260px;
         display: flex;
-
+        @include mini {
+          height: 165px;
+        }
+        @include md {
+          height: 260px;
+        }
         .hero-rect {
           width: 15px;
           background-color: $primary-color;
@@ -37,6 +47,25 @@ body {
           font-weight: 700;
           margin: 0;
           color: black;
+          @include mini {
+            font-size: 45px;
+            line-height: 56px;
+            font-weight: 700;
+          }
+          @include sm {
+            font-size: $small + 5px;
+          }
+          @include md {
+            font-size: $medium;
+          }
+          @include lg {
+            font-size: $large;
+            line-height: 60px;
+          }
+          @include xl {
+            font-size: $extra-large;
+            line-height: 86px;
+          }
         }
       }
 
@@ -49,6 +78,13 @@ body {
           color: $secondary-color;
           font-family: $secondary-font;
           margin: 0;
+          @include mini {
+            font-size: 30px;
+            line-height: 40px;
+          }
+          @include md {
+            font-size: $medium;
+          }
         }
       }
 
@@ -56,6 +92,14 @@ body {
         padding-left: 23px;
         display: flex;
         align-items: center;
+        @include mini {
+          flex-direction: column;
+          justify-content: center;
+          padding: 0;
+        }
+        @include md {
+          flex-direction: row;
+        }
         .button-big {
           width: 265px;
           height: 63px;
@@ -63,9 +107,14 @@ body {
           align-items: center;
           justify-content: center;
           background-color: $primary-color;
-          border-radius: 32px;
+          border-radius: 25px;
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-
+          @include mini {
+            margin-left: 0;
+            margin-top: 20px;
+          }
+          @include md {
+          }
           @include focusGrow() {
           }
           span {
@@ -84,9 +133,15 @@ body {
           align-items: center;
           justify-content: center;
           background-color: white;
-          border-radius: 32px;
+          border-radius: 25px;
           margin-left: 45px;
           @include focusGrow() {
+          }
+          @include mini {
+            margin-left: 0;
+            margin-top: 20px;
+          }
+          @include md {
           }
           span {
             font-family: $primary-font;
@@ -101,6 +156,12 @@ body {
       display: flex;
       justify-content: center;
       width: 50%;
+      @include mini {
+        display: none;
+      }
+      @include md {
+        display: flex;
+      }
     }
   }
   .hero-divider {

@@ -1,29 +1,53 @@
-$global-padding: 25px;
+$global-padding: 0px;
 
 $tech-svg-size: 100px;
+//Breakpoints
+$screen-mini-sm: 300px;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
 
-@mixin for-phone-only {
-  @media (max-width: 599px) {
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+//BreakPoint Mixins
+@mixin mini {
+  @media (min-width: #{$screen-mini-sm}) {
     @content;
   }
 }
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
+// Small devices
+@mixin sm {
+  $global-padding: 0px;
+  @media (min-width: #{$screen-sm-min}) {
     @content;
   }
 }
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) {
+
+// Medium devices
+@mixin md {
+  $global-padding: 20px;
+
+  @media (min-width: #{$screen-md-min}) {
     @content;
   }
 }
-@mixin for-desktop-up {
-  @media (min-width: 1200px) {
+
+// Large devices
+@mixin lg {
+  $global-padding: 25px;
+  @media (min-width: #{$screen-lg-min}) {
     @content;
   }
 }
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) {
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
     @content;
   }
 }
