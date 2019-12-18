@@ -4,6 +4,7 @@ import { ReactComponent as DocumentSVG } from "../../assets/document.svg";
 import { ProjectArray } from "../../utilities/projectlist";
 
 const Works = React.forwardRef((props: any, ref: any) => {
+  console.log(ref);
   return (
     <section ref={ref} className="works-section">
       <div className="works-header">

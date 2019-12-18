@@ -2,7 +2,8 @@
   position: absolute;
   height: 300vh;
   width: 100%;
-  background-color: $base-color;
+  z-index: 2;
+  background-color: $optional;
   display: flex;
   justify-content: center;
   padding-top: 20rem;

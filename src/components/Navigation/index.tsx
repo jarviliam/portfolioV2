@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ReactComponent as GitHubSVG } from "../../assets/github-original.svg";
 import { ReactComponent as WaveSVG } from "../../assets/waves.svg";
 
@@ -8,9 +8,7 @@ type Props = {
 
 const Navigation: React.SFC<Props> = props => {
   const [open, setOpen] = useState(false);
-  const openTab = () => {
-    setOpen(!open);
-  };
+
   const style = {
     transform: open ? "translateY(0)" : "translateY(-100%)",
     animationName: open ? "slideDown" : "slideUp",
@@ -55,7 +53,7 @@ const Navigation: React.SFC<Props> = props => {
             <GitHubSVG width="40px" />
           </a>
         </div>
-        <div className="tab-button" onClick={openTab}>
+        <div className="tab-button" onClick={() => setOpen(true)}>
           <span>click</span>
         </div>
       </div>
@@ -67,13 +65,15 @@ const Navigation: React.SFC<Props> = props => {
           </div>
           <ul>
             <li>
-              <span>Skills</span>
+              <span onClick={() => props.handleClick(2)}>Skills</span>
             </li>
             <li>
-              <span>Work</span>
+              <span onClick={() => props.handleClick(3)}>Work</span>
             </li>
             <li>
-              <span>GitHub</span>
+              <span>
+                <a href="">GitHub</a>
+              </span>
             </li>
           </ul>
         </div>

@@ -9,23 +9,25 @@ import Works from "./components/Works";
 import "./sass/main.scss";
 
 class App extends Component<{}, {}> {
-  public refArray: HTMLDivElement[];
-  private setRef: (ref: any) => void;
+  public refArray: any[];
+  private setRef: () => any;
   constructor(props: {}) {
     super(props);
     this.refArray = [];
-    this.setRef = (ref: any) => {
+    this.setRef = () => {
+      const ref = React.createRef();
       this.refArray.push(ref);
+      return ref;
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
-    console.log("mount");
     window.scrollTo(0, 0);
   }
   handleClick(ref: number) {
-    this.refArray[ref].scrollIntoView({
+    console.log(this.refArray);
+    this.refArray[ref].current.scrollIntoView({
       behavior: "smooth",
       block: "start"
     });
@@ -35,10 +37,10 @@ class App extends Component<{}, {}> {
       <div className="App">
         <Loader />
         <Navigation handleClick={this.handleClick} />
-        <Hero ref={(ref: any) => this.setRef(ref)} />
-        <Skills ref={(ref: any) => this.setRef(ref)} />
-        <Works ref={(ref: any) => this.setRef(ref)} />
-        <Footer ref={(ref: any) => this.setRef(ref)} />
+        <Hero ref={this.setRef()} />
+        <Skills ref={this.setRef()} />
+        <Works ref={this.setRef()} />
+        <Footer ref={this.setRef()} />
       </div>
     );
   }

@@ -67,6 +67,7 @@
   .slider {
     position: absolute;
     top: 0;
+    z-index: 1;
     width: 100%;
     .slider-menu {
       width: 100%;
@@ -91,12 +92,6 @@
           font-family: $primary-font;
           font-size: $medium;
           transition: right 0.4s ease-in-out;
-
-          // &:hover {
-          //   cursor: pointer;
-          //   animation-name: slideRight;
-          //   animation-duration: 1s;
-          // }
         }
       }
     }
