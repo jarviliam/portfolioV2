@@ -22,11 +22,11 @@ class App extends Component<{}, {}> {
 
     this.handleClick = this.handleClick.bind(this);
   }
+
   componentDidMount() {
     window.scrollTo(0, 0);
   }
   handleClick(ref: number) {
-    console.log(this.refArray);
     this.refArray[ref].current.scrollIntoView({
       behavior: "smooth",
       block: "start"

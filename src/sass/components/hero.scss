@@ -10,7 +10,7 @@ body {
 .hero-section {
   padding-left: $global-padding;
   padding-right: $global-padding;
-
+  height: 100vh; //Testing
   .hero-main-container {
     padding-top: 49px;
     display: flex;
