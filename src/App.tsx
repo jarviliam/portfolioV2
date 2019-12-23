@@ -37,7 +37,7 @@ class App extends Component<{}, {}> {
       <div className="App">
         <Loader />
         <Navigation handleClick={this.handleClick} />
-        <Hero ref={this.setRef()} />
+        <Hero handleClick={this.handleClick} ref={this.setRef()} />
         <Skills ref={this.setRef()} />
         <Works ref={this.setRef()} />
         <Footer />

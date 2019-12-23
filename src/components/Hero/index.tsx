@@ -24,7 +24,7 @@ const Hero = React.forwardRef((props: any, ref: any) => {
             <div className="button-big">
               <span>To GitHub</span>
             </div>
-            <div className="button-small">
+            <div className="button-small" onClick={() => props.handleClick(2)}>
               <span>my works</span>
             </div>
           </div>
