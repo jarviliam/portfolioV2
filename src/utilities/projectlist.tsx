@@ -25,6 +25,7 @@ class Project {
   public frontend: any[];
   public backend: any[];
   public url: string;
+  public type: string;
 
   constructor(
     title: string,
@@ -32,6 +33,7 @@ class Project {
     highlights: string[],
     frontend: string[],
     backend: string[],
+    type: string,
     // tslint:disable-next-line: trailing-comma
     url: string
   ) {
@@ -41,6 +43,7 @@ class Project {
     this.frontend = frontend;
     this.backend = backend;
     this.url = url;
+    this.type = type;
   }
   public renderFrontEnd() {
     return this.frontend.map((item, index) => {
@@ -57,6 +60,18 @@ class Project {
       return <img className="svg" alt="Highlights" src={item} key={index} />;
     });
   }
+  public renderType() {
+    switch (this.type) {
+      case "FrontEnd":
+        return <span className="type">Front-End</span>;
+      case "BackEnd":
+        return <span className="type">Back-End</span>;
+      case "FullStack":
+        return <span className="type">FullStack</span>;
+      default:
+        return null;
+    }
+  }
 }
 
 const portfolioDesc =
@@ -67,6 +82,7 @@ export const Portfolio = new Project(
   [IllustratorSVG, ReactSVG, SassSVG],
   [JavaScriptSVG, HTMLSVG, AdobeXD, IllustratorSVG],
   [],
+  "FrontEnd",
   "https://github.com/jarviliam/portfolioV2"
 );
 
@@ -78,6 +94,7 @@ export const SpinThis = new Project(
   [ReactSVG, ExpressSVG, MongoDB],
   [HTMLSVG, ReactSVG, ReduxSVG, SassSVG],
   [ExpressSVG, MongoDB],
+  "FullStack",
   "https://github.com/jarviliam/record-store"
 );
 
@@ -89,6 +106,7 @@ export const MovieBuff = new Project(
   [ReactSVG, ReduxSVG, SassSVG],
   [HTMLSVG, ReactSVG, ReduxSVG, SassSVG],
   [],
+  "FrontEnd",
   "https://github.com/jarviliam/movie-buff"
 );
 
@@ -100,6 +118,7 @@ export const MeigenNow = new Project(
   [TypeScriptSVG, ReactSVG, GraphQL],
   [HTMLSVG, ReactSVG, ReduxSVG, SassSVG, TypeScriptSVG],
   [NodeSVG, ExpressSVG, GraphQL, Firebase, Apollo, Redis],
+  "FullStack",
   "https://github.com/jarviliam/meigen-now"
 );
 const weatherAppDesc =
@@ -110,6 +129,7 @@ export const WeatherApp = new Project(
   [ReduxSVG, ReactSVG, SassSVG],
   [ReduxSVG, ReactSVG, SassSVG, HTMLSVG, JavaScriptSVG],
   [],
+  "FrontEnd",
   "https://github.com/jarviliam/Weather-Application"
 );
 const portfolioV1Desc =
@@ -120,14 +140,39 @@ export const PortfolioV1 = new Project(
   [SassSVG, ReactSVG, ReduxSVG],
   [HTMLSVG, ReactSVG, SassSVG, ReduxSVG],
   [],
+  "FrontEnd",
   "https://github.com/jarviliam/portfolio"
 );
 
+const WeatheringDesc =
+  "Updated weather forcasting frontend application that utilizes two public APIs to display the forecast. The first API is used for location searching that provides latitude and longtitude measurements for the selected city. This information is then forwarded to a second API for the weather information. Animations and Icons were all done by myself.";
+
+export const Weathering = new Project(
+  "Weathering",
+  WeatheringDesc,
+  [SassSVG, ReactSVG, TypeScriptSVG],
+  [SassSVG, ReactSVG, TypeScriptSVG],
+  [ExpressSVG],
+  "FrontEnd",
+  ""
+);
+const BlogAPIdesc = "Blog-APi coded with Ruby on Rails";
+export const BlogAPI = new Project(
+  "Blog-API",
+  BlogAPIdesc,
+  [],
+  [],
+  [],
+  "BackEnd",
+  ""
+);
 export const ProjectArray = [
   Portfolio,
+  Weathering,
   SpinThis,
   MeigenNow,
   MovieBuff,
+  BlogAPI,
   WeatherApp,
   PortfolioV1
 ];

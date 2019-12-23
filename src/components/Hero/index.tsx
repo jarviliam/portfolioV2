@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as ComputerSVG } from "../../assets/Computer.svg";
+import { ReactComponent as CMDSVG } from "../../assets/CMD.svg";
 
 const Hero = React.forwardRef((props: any, ref: any) => {
   return (
@@ -30,10 +30,10 @@ const Hero = React.forwardRef((props: any, ref: any) => {
           </div>
         </div>
         <div className="hero-right">
-          <ComputerSVG id="computer" />
+          <CMDSVG id="computer" />
         </div>
       </div>
-      <div className="hero-divider" />
+      {/* <div className="hero-divider" /> */}
     </section>
   );
 });

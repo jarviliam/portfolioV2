@@ -5,7 +5,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: linear-gradient(
+    180deg,
+    rgba(234, 226, 183, 1) 70%,
+    rgba(234, 226, 183, 0.1407913507199755) 100%
+  );
+
   .logo-name {
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    .svg {
+      width: 50px;
+    }
     h2 {
       color: $primary-color;
       font-family: $primary-font;
@@ -13,10 +27,10 @@
       font-size: 35px;
       line-height: 43px;
       font-style: italic;
-      @include hocus() {
-        background-size: 100% 2px;
-        cursor: pointer;
-      }
+      // @include hocus() {
+      //   background-size: 100% 2px;
+      //   cursor: pointer;
+      // }
       @include mini {
         // font-size: 20px;
         line-height: 30px;

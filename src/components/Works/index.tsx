@@ -15,7 +15,7 @@ const Works = React.forwardRef((props: any, ref: any) => {
             <div className="box" />
           </div>
         </div>
-        <div className="works-container">
+        {/* <div className="works-container">
           {ProjectArray.map((project, key) => (
             <div key={key} className="work">
               <div className="heading">
@@ -39,6 +39,34 @@ const Works = React.forwardRef((props: any, ref: any) => {
               </div>
             </div>
           ))}
+        </div> */}
+        <div className="works-containerZ">
+          <div className="works-left"></div>
+          <div className="works-right">
+            {ProjectArray.map((project, key) => (
+              <div key={key} className="project">
+                <div className="header">
+                  <h2>{project.title}</h2>
+                  {project.renderType()}
+                </div>
+                <div className="main">{project.renderHighlights()}</div>
+                <div className="right">
+                  <div className="red-button">
+                    <span>Read More</span>
+                  </div>
+                  <div className="code-button">
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={project.url}
+                    >
+                      <DocumentSVG className="document" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Visibility>
     </section>

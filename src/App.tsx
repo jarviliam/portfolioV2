@@ -40,7 +40,7 @@ class App extends Component<{}, {}> {
         <Hero ref={this.setRef()} />
         <Skills ref={this.setRef()} />
         <Works ref={this.setRef()} />
-        <Footer ref={this.setRef()} />
+        <Footer />
       </div>
     );
   }

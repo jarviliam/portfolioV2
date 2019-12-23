@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as GitHubSVG } from "../../assets/github-original.svg";
+import { ReactComponent as LogoSVG } from "../../assets/logo.svg";
 import { ReactComponent as WaveSVG } from "../../assets/waves.svg";
 
 type Props = {
@@ -17,6 +18,7 @@ const Navigation: React.SFC<Props> = props => {
   return (
     <div id="nav" className="navigation">
       <div className="logo-name">
+        <LogoSVG className="svg" />
         <h2>Liam Jarvis</h2>
       </div>
       <div className="navigation-contents">

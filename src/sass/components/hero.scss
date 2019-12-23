@@ -155,12 +155,22 @@ body {
     .hero-right {
       display: flex;
       justify-content: center;
-      width: 50%;
+      width: 60%;
+      position: relative;
       @include mini {
         display: none;
       }
       @include md {
         display: flex;
+      }
+      padding-left: 10px;
+      padding-right: 10px;
+      #computer {
+        width: 100%;
+      }
+      .backing {
+        position: absolute;
+        background-color: $primary-color;
       }
     }
   }
