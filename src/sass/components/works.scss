@@ -48,6 +48,18 @@
 
     .works-left {
       width: 50%;
+      position: relative;
+      .loading {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        background-color: $base-color;
+        height: 100%;
+        animation-duration: 3s;
+      }
+      .d-none {
+        display: none;
+      }
       .project {
         padding: 10px;
         .header {
