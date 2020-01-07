@@ -151,7 +151,7 @@ export const PortfolioV1 = new Project(
 );
 
 const WeatheringDesc =
-  "Updated weather forcasting frontend application that utilizes two public APIs to display the forecast. The first API is used for location searching that provides latitude and longtitude measurements for the selected city. This information is then forwarded to a second API for the weather information. Animations and Icons were all done by myself.";
+  "Updated weather forecasting frontend application that utilizes two public APIs to display the forecast. The first API is used for location searching that provides latitude and longtitude measurements for the selected city. This information is then forwarded to a second API for the weather information. Animations and Icons were all done by myself.";
 
 export const Weathering = new Project(
   "Weathering",
@@ -160,9 +160,10 @@ export const Weathering = new Project(
   [SassSVG, ReactSVG, TypeScriptSVG],
   [ExpressSVG],
   "FrontEnd",
-  ""
+  "https://github.com/jarviliam/weathering"
 );
-const BlogAPIdesc = "Blog-APi coded with Ruby on Rails";
+const BlogAPIdesc =
+  "Standard Blog-APi coded with Ruby on Rails. Consists of User, Post, Comment models that interact with one another. Authorization and Authentication is implemented through Devise and JWT. Protected Routes are also implemented.";
 export const BlogAPI = new Project(
   "Blog-API",
   BlogAPIdesc,
@@ -170,7 +171,7 @@ export const BlogAPI = new Project(
   [],
   [],
   "BackEnd",
-  ""
+  "https://github.com/jarviliam/rails-blog-api"
 );
 export const ProjectArray = [
   Portfolio,

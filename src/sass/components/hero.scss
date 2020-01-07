@@ -15,24 +15,25 @@ body {
     padding-top: 49px;
     display: flex;
     height: 560px;
-
+    flex-direction: column;
+    @include lg {
+      flex-direction: row;
+    }
     .hero-left {
       display: flex;
       flex-direction: column;
-      width: 50%;
-      @include mini {
-        width: 100%;
-      }
+      width: 100%;
       @include md {
         width: 50%;
+        order: 0;
       }
       .hero-action {
-        height: 260px;
+        // height: 260px;
         display: flex;
-        @include mini {
-          height: 165px;
-        }
+        height: 165px;
+        padding-left: 10px;
         @include md {
+          padding-left: 5px;
           height: 260px;
         }
         .hero-rect {
@@ -53,13 +54,13 @@ body {
             font-weight: 700;
           }
           @include sm {
-            font-size: $small + 5px;
+            font-size: $large;
           }
           @include md {
-            font-size: $medium;
+            font-size: $large;
           }
           @include lg {
-            font-size: $large;
+            // font-size: $large + 15;
             line-height: 60px;
           }
           @include xl {
@@ -89,16 +90,15 @@ body {
       }
 
       .hero-buttons {
-        padding-left: 23px;
         display: flex;
         align-items: center;
-        @include mini {
-          flex-direction: column;
-          justify-content: center;
-          padding: 0;
-        }
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5px;
+        padding-right: 5px;
         @include md {
           flex-direction: row;
+          padding-left: 23px;
         }
         .button-big {
           width: 265px;
@@ -108,6 +108,8 @@ body {
           justify-content: center;
           background-color: $primary-color;
           border-radius: 25px;
+          margin-left: 5px;
+          margin-right: 5px;
           box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
           @include mini {
             margin-left: 0;
@@ -138,7 +140,7 @@ body {
           @include focusGrow() {
           }
           @include mini {
-            margin-left: 0;
+            // margin-left: 0;
             margin-top: 20px;
           }
           @include md {
@@ -155,16 +157,19 @@ body {
     .hero-right {
       display: flex;
       justify-content: center;
-      width: 60%;
+      // width: 60%;
       position: relative;
-      @include mini {
-        display: none;
-      }
-      @include md {
-        display: flex;
-      }
       padding-left: 10px;
       padding-right: 10px;
+      padding-bottom: 10px;
+      // @include mini {
+      //   display: none;
+      // }
+      @include md {
+        display: flex;
+        width: 60%;
+        padding-bottom: 0px;
+      }
       #computer {
         width: 100%;
       }

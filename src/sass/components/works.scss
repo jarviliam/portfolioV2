@@ -44,10 +44,15 @@
   }
   .works-container {
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
+    @include md {
+      // font-size: 20px;
+      flex-direction: row;
+    }
     .works-left {
-      width: 50%;
+      @include md {
+        width: 50%;
+      }
       position: relative;
       .loading {
         // position: absolute;
@@ -100,7 +105,10 @@
       }
     }
     .works-right {
-      width: 50%;
+      width: 100%;
+      @include md {
+        width: 50%;
+      }
       .project {
         width: 100%;
         height: 100px;
@@ -118,17 +126,27 @@
         }
         img {
           width: 10rem;
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
         }
         .main > .svg {
-          width: 50px;
-          padding-left: 5px;
-          padding-right: 5px;
+          display: none;
+          @include md {
+            width: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
         }
         .right {
           display: flex;
+          justify-self: flex-end;
           .red-button {
-            width: 185px;
-            height: 45px;
+            width: 120px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+
+            @include md {
+              width: 185px;
+              height: 45px;
+            }
             background-color: $primary-color;
             display: flex;
             justify-content: center;
@@ -151,6 +169,8 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             background-color: #7dc95e;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -161,58 +181,6 @@
               cursor: pointer;
             }
           }
-        }
-      }
-    }
-  }
-  .works-containerZ {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding: $global-padding;
-    .work {
-      width: 350px;
-      background-color: white;
-      height: 320px;
-      border-radius: 17px;
-      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      .heading {
-        text-align: center;
-        height: 50%;
-        h2 {
-          font-family: $primary-font;
-          font-weight: 600;
-          font-size: 30px;
-          line-height: 37px;
-          font-style: italic;
-          color: $secondary-color;
-          margin: 0;
-        }
-        p {
-          font-weight: 500;
-          font-size: $small;
-          line-height: 36px;
-          text-align: left;
-          color: $secondary-color;
-          padding: 10px;
-          font-family: $secondary-font;
-        }
-      }
-      .tech {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 25%;
-        .svg {
-          width: $tech-svg-size / 2;
-          height: $tech-svg-size / 2;
-          padding-left: 5px;
-          padding-right: 5px;
         }
       }
     }

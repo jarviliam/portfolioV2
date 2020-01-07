@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState, useRef } from "react";
 import { fadeIn, fadeOut } from "../../utilities/animationHelper";
 import Visibility from "../Visibility/index";
 
@@ -8,6 +9,7 @@ import { ProjectArray } from "../../utilities/projectlist";
 
 const Works = React.forwardRef((props: any, ref: any) => {
   const [displayProject, setProject] = useState();
+  const projectViewRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
     if (displayProject !== undefined) {
@@ -23,13 +25,17 @@ const Works = React.forwardRef((props: any, ref: any) => {
     if (loader) {
       fadeOut(loader);
       setTimeout(() => setProject(project), 1000);
+      projectViewRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     }
   };
 
   return (
     <section ref={ref} className="works-section">
       <Visibility parentRef={ref}>
-        <div className="works-header">
+        <div ref={projectViewRef} className="works-header">
           <h2>Works</h2>
           <div className="below">
             <div className="rect" />
@@ -61,12 +67,16 @@ const Works = React.forwardRef((props: any, ref: any) => {
                       </div>
                     )}
                     {displayProject.type === "FullStack" && (
-                      <div className="tech">
-                        <span>Front-End Tech:</span>
-                        {displayProject.renderFrontEnd()}
-                        <span>Back-End Tech:</span>
-                        {displayProject.renderBackEnd()}
-                      </div>
+                      <>
+                        <div className="tech">
+                          <span>Front-End Tech:</span>
+                          {displayProject.renderFrontEnd()}
+                        </div>
+                        <div className="tech">
+                          <span>Back-End Tech:</span>
+                          {displayProject.renderBackEnd()}
+                        </div>
+                      </>
                     )}
                   </div>
                 </div>
