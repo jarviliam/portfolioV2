@@ -26,6 +26,7 @@ class App extends Component<{}, {}> {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
+
   handleClick(ref: number) {
     this.refArray[ref].current.scrollIntoView({
       behavior: "smooth",

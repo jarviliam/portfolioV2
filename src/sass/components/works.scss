@@ -50,12 +50,12 @@
       width: 50%;
       position: relative;
       .loading {
-        position: absolute;
-        z-index: 3;
+        // position: absolute;
+        // z-index: 3;
         width: 100%;
         background-color: $base-color;
         height: 100%;
-        animation-duration: 3s;
+        animation-duration: 1s;
       }
       .d-none {
         display: none;
@@ -76,7 +76,9 @@
             color: $secondary-color;
             margin: 0;
           }
-          span {
+          img {
+            padding-top: 20px;
+            width: 10rem;
           }
         }
         .main {
@@ -85,6 +87,14 @@
             font-size: $small;
             font-family: $secondary-font;
             color: $secondary-color;
+          }
+          .tech {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            .svg {
+              width: 50px;
+            }
           }
         }
       }
@@ -106,8 +116,13 @@
           color: $secondary-color;
           margin: 0;
         }
+        img {
+          width: 10rem;
+        }
         .main > .svg {
           width: 50px;
+          padding-left: 5px;
+          padding-right: 5px;
         }
         .right {
           display: flex;

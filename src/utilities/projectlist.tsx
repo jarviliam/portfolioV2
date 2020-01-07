@@ -16,6 +16,10 @@ import Redis from "../assets/backend/redis-plain-wordmark.svg";
 import IllustratorSVG from "../assets/design/illustrator-plain.svg";
 import AdobeXD from "../assets/design/xd.svg";
 
+import FrontEndSVG from "../assets/FEType.svg";
+import FullStackSVG from "../assets/FSType.svg";
+import BackEndSVG from "../assets/BEType.svg";
+
 import React from "react";
 
 class Project {
@@ -63,11 +67,13 @@ class Project {
   public renderType() {
     switch (this.type) {
       case "FrontEnd":
-        return <span className="type">Front-End</span>;
+        return <img src={FrontEndSVG} id="proj-type" alt="Front-End Project" />;
       case "BackEnd":
-        return <span className="type">Back-End</span>;
+        return <img src={BackEndSVG} id="proj-type" alt="Back-End Project" />;
       case "FullStack":
-        return <span className="type">FullStack</span>;
+        return (
+          <img src={FullStackSVG} id="proj-type" alt="FullStack Project" />
+        );
       default:
         return null;
     }

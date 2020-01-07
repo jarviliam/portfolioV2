@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { fadeIn, fadeOut } from "../../utilities/animationHelper";
 import Visibility from "../Visibility/index";
-import { fadeOut, fadeIn } from "../../utilities/animationHelper";
 
 import { ReactComponent as CMDSVG } from "../../assets/CMDBlank.svg";
 import { ReactComponent as DocumentSVG } from "../../assets/document.svg";
@@ -10,11 +10,10 @@ const Works = React.forwardRef((props: any, ref: any) => {
   const [displayProject, setProject] = useState();
 
   useEffect(() => {
-    if (displayProject !== null) {
+    if (displayProject !== undefined) {
       const loader = document.getElementById("load");
       if (loader) {
         fadeIn(loader);
-        setTimeout(() => loader.classList.add("d-none"), 2000);
       }
     }
   }, [displayProject]);
@@ -23,9 +22,10 @@ const Works = React.forwardRef((props: any, ref: any) => {
     const loader = document.getElementById("load");
     if (loader) {
       fadeOut(loader);
-      setProject(project);
+      setTimeout(() => setProject(project), 1000);
     }
   };
+
   return (
     <section ref={ref} className="works-section">
       <Visibility parentRef={ref}>
@@ -38,20 +38,42 @@ const Works = React.forwardRef((props: any, ref: any) => {
         </div>
         <div className="works-container">
           <div className="works-left">
-            <div id="load" className="loading" />
-            {displayProject ? (
-              <div className="project">
-                <div className="header">
-                  <h2>{displayProject.title}</h2>
-                  {displayProject.renderType()}
+            <div id="load" className="loading">
+              {displayProject ? (
+                <div id="test" className="project">
+                  <div className="header">
+                    <h2>{displayProject.title}</h2>
+                    {displayProject.renderType()}
+                  </div>
+                  <div className="main">
+                    <p>{displayProject.description}</p>
+
+                    {displayProject.type === "FrontEnd" && (
+                      <div className="tech">
+                        <span>Front-End Tech:</span>
+                        {displayProject.renderFrontEnd()}
+                      </div>
+                    )}
+                    {displayProject.type === "BackEnd" && (
+                      <div className="tech">
+                        <span>Back-End Tech:</span>
+                        {displayProject.renderFrontEnd()}
+                      </div>
+                    )}
+                    {displayProject.type === "FullStack" && (
+                      <div className="tech">
+                        <span>Front-End Tech:</span>
+                        {displayProject.renderFrontEnd()}
+                        <span>Back-End Tech:</span>
+                        {displayProject.renderBackEnd()}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="main">
-                  <p>{displayProject.description}</p>
-                </div>
-              </div>
-            ) : (
-              <CMDSVG width={200} />
-            )}
+              ) : (
+                <CMDSVG width={200} />
+              )}
+            </div>
           </div>
           <div className="works-right">
             {ProjectArray.map((project, key) => (

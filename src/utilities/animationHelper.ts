@@ -1,9 +1,9 @@
 export const fadeOut = (element: HTMLElement) => {
-  element.classList.remove("d-none");
-  element.classList.add("animated", "fadeIn");
+  element.classList.add("animated", "fadeOut");
+  // element.classList.remove("d-none");
 };
 
 export const fadeIn = (element: HTMLElement) => {
-  element.classList.remove("fadeIn");
-  element.classList.add("fadeOut");
+  element.classList.remove("fadeOut");
+  element.classList.add("fadeIn");
 };
